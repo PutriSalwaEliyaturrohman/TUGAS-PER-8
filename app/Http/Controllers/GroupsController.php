@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Groups;
+use App\Models\Groups; 
 use Illuminate\Http\Request;
 
 class GroupsController extends Controller
@@ -14,7 +14,7 @@ class GroupsController extends Controller
      */
     public function index()
     {
-        $groups = Groups::orderBy('id', 'desc')->paginate(4);
+        $groups = Groups::orderBy('id', 'desc')->paginate(4); 
 
         return view('groups.index', compact('groups'));
     }
